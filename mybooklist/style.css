@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+body {
+    background-color: #f8f5e3;
+}
+button {
+    width: 8em;
+    padding: 0.6em;
+    border-radius: 8px;
+    background-color: #D3DEF1;
+    transition: .8s;
+}
+button :hover {
+    background-color: #F2D5E0;
+}
+/* menu.php ここから*/
+
+/* menu.php  ここまで　*/
+/* index.php ここから */
+#index {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    text-align: center;
+}
+/* index.php ここまで */
+
+/* register-input.php　ここから */
+p.reg_1_title p.reg_2_kana p.reg_3_writer p.reg_4_impression p.reg_5_button p.reg_6_home{
+    text-align: center;
+    margin-bottom: 20px;
+}
+form.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    border: 1px solid #000;
+    border-width: medium;
+    margin: 0 auto;
+    padding: 45px 145px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    position: relative;
+    top: 35px;
+}
+p.reg_5_button button{
+    width: 5em;
+    padding: 0.5em;
+    border-radius: 6px;
+    background-color: #f8f5e3;
+}
+p.reg_5_button button:hover {
+    background-color: #cae853;
+}
+input[required], textarea[required] {
+    background-color: #f0908d;
+}
+input[required] {
+    width: 250px;
+}
+textarea {
+    width: 350px;
+    height: 150px;
+    border-width: medium;
+    border-color: #000;
+    border-radius: 6px;
+}
+p.reg_6_home button {
+    
+    float: right;
+    margin-right: 500px;
+    position: relative;
+    top: 65px;
+    
+}
+/* register-input.php　ここまで */
+
+/* register-output.php　ここから */
+.reg_7_update, .reg_8_registration, .reg_9_home {
+    text-align: center;
+}
+/* register-output.php　ここまで */
+
+/* search.php　ここから */
+#search {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form.si_form button{
+    text-align: center;
+}
+p.si_button button {
+    margin-right: 0;
+
+}
+/* search.php　ここまで */
+
+
+
+/* list.php　ここから */
+#list {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* list.php　ここから */
+
+/* detail.php　ここから */
+#detail {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* detail.php　ここから */
+
+/* delete.php　ここから */
+#delete {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+p.detail_button{
+    text-align: center;
+}
+/* delete.php　ここまで */
+
+/* contents.php ここから */
+#contents {
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* countents.php　ここまで */
