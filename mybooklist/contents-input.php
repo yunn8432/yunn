@@ -3,7 +3,7 @@
     <h1>索引</h1>
     <hr>
 <?php
-    $pdo=new PDO('mysql:host=localhost;dbname=book;charset=utf8','book','password');
+    $pdo=new PDO('mysql:host=localhost;dbname=xslive230801_chidori;charset=utf8','xslive230801_chi','livebusiness');
 // $pdo->setAttribute(PDO::ATTOR_ERROMODE, PDO::ERROMODE_EXCEPTION);
 
     $indexes=['あ'=>['あ','い','う','え','お'], 
@@ -13,17 +13,17 @@
           'な'=>['な','に','ぬ','ね','の'],
           'は'=>['は','ひ','ふ','へ','ほ'],
           'ま'=>['ま','み','む','め','も'],
-          'や'=>['や','','ゆ','','よ'],
+          'や'=>['や','ゆ','よ'],
           'ら'=>['ら','り','る','れ','ろ'],
-          'わ'=>['わ','','を','','ん'],
+          'わ'=>['わ','を','ん'],
           'が'=>['が','ぎ','ぐ','げ','ご'],
           'ざ'=>['ざ','じ','ず','ぜ','ぞ'],
           'だ'=>['だ','ぢ','づ','で','ど'],
           'ば'=>['ば','び','ぶ','べ','ぼ'],
           'ぱ'=>['ぱ','ぴ','ぷ','ぺ','ぽ'],
           ];
-          
-    echo '<div class="colum">';
+         
+    echo '<div class="content"><div class="colum">';
     foreach($indexes as $index => $kana_chars){
         if($index==='が'){
             echo '</div><div class="colum">';
@@ -34,7 +34,8 @@
         }
         echo '</div>';
     }
-    echo '</div>';
+    echo '</div></div>';
     ?>
+    <p><input type="button" value="一覧に戻る" onclick="location.href='list.php'"></p>
 </body>
 <?php require 'footer.php'; ?>

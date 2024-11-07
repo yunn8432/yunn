@@ -8,7 +8,7 @@
 </form>
 <hr>
 <?php
-    $pdo=new PDO('mysql:host=localhost;dbname=book;charset=utf8','book','password');
+    $pdo=new PDO('mysql:host=localhost;dbname=xslive230801_chidori;charset=utf8','xslive230801_chi','livebusiness');
 
     if(isset($_GET['search']) && $_GET['search'] !== ''){
         // mb_convert_kanaで検索キーワードをカタカナに変換
@@ -24,12 +24,12 @@
         $sql=$pdo->query('SELECT*FROM list');
     }
     foreach($sql as $row){
-        echo '<h2><a href="detail.php?title='.htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8').'">'. htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8').'</a></h2>'. htmlspecialchars($row['writer'],ENT_QUOTES,'UTF-8');
+        echo '<h2><a href="detail.php?title='.htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8').'">'. htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8').'</a></h2>著者：'. htmlspecialchars($row['writer'],ENT_QUOTES,'UTF-8');
     }
     
     
 ?>
 
-<p class="si_button"><button onclick="location.href='index.php'">ホームに戻る</button></p>
+<p class="search_button"><button onclick="location.href='index.php'">ホームに戻る</button></p>
 </body>
 <? require 'footer.php'; ?>

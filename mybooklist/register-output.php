@@ -1,5 +1,5 @@
 <?php require 'header.php'; ?>
-<body>
+<body id="register">
 
 <?php
     if(empty($_POST['title']) || empty($_POST['kana']) || empty($_POST['writer']) || empty($_POST['impression'])){ ?>
@@ -8,7 +8,7 @@
 <?php 
     exit;
     } else {
-        $pdo=new PDO('mysql:host=localhost;dbname=book;charset=utf8','book','password');
+        $pdo=new PDO('mysql:host=localhost;dbname=xslive230801_chidori;charset=utf8','xslive230801_chi','livebusiness');
 
         $title=htmlspecialchars($_POST['title'],ENT_QUOTES,'UTF-8');
         $kana=htmlspecialchars($_POST['kana'],ENT_QUOTES,'UTF-8');
@@ -25,7 +25,7 @@
         $list_id=$pdo->lastInsertId('list');
 ?>
         <h1><?= 'Successed!' ?></h1>
-        <h2 class="reg_7_uodate"><?= '更新が完了しました！' ?></h2>
+        <h2><?= '更新が完了しました！' ?></h2>
 <?php 
     } else {
     $insertlist=$pdo->prepare('INSERT INTO list(title,writer,impression) VALUES(?,?,?)');
@@ -37,11 +37,8 @@
     $insertkana->execute([$list_id, $kana]);
 ?>
         <h1><?= 'Successed!' ?></h1>
-        <h2 class="reg_8_registration"><?= '登録完了しました！' ?></h2>
+        <h2><?= '登録完了しました！' ?></h2>
 <?php } ?>
-
-<form action="register-input.php" method="POST">
-    <p class="reg_9_home"><button>戻る</button></p>
-</form>
+<p class="register_button"><button onclick="location.href='register-input.php'">戻る</button></p>
 </body>
 <?php require 'footer.php'; ?>

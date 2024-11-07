@@ -3,19 +3,32 @@
 body {
     background-color: #f8f5e3;
 }
-button {
+p button{
+    background-color: #D3DEF1;
     width: 8em;
     padding: 0.6em;
     border-radius: 8px;
-    background-color: #D3DEF1;
     transition: .8s;
+    position: relative;
+    top: 15px;
 }
-button :hover {
+p button:hover{
     background-color: #F2D5E0;
 }
 /* menu.php ここから*/
-
+nav button{
+    font-size: 20px;
+    background-color: #AFDFE4;
+    border-width: medium;
+    padding: 6px 12px;
+    display: inline-block;
+    transition: .5s;
+}
+nav button:hover{
+    border-radius: 12px;
+}
 /* menu.php  ここまで　*/
+
 /* index.php ここから */
 #index {
     width: 960px;
@@ -52,9 +65,17 @@ p.reg_5_button button{
     padding: 0.5em;
     border-radius: 6px;
     background-color: #f8f5e3;
+    text-align: center;
+    position: relative;
+    top: 15px;
 }
 p.reg_5_button button:hover {
     background-color: #cae853;
+}
+p.reg_6_home{
+    text-align: center;
+    position: relative;
+    top: 15px;
 }
 input[required], textarea[required] {
     background-color: #f0908d;
@@ -68,19 +89,14 @@ textarea {
     border-width: medium;
     border-color: #000;
     border-radius: 6px;
-}
-p.reg_6_home button {
-    
-    float: right;
-    margin-right: 500px;
-    position: relative;
-    top: 65px;
-    
-}
+}    
 /* register-input.php　ここまで */
 
 /* register-output.php　ここから */
-.reg_7_update, .reg_8_registration, .reg_9_home {
+#register h2{
+    text-align: center;
+}
+p.register_button{
     text-align: center;
 }
 /* register-output.php　ここまで */
@@ -95,13 +111,13 @@ p.reg_6_home button {
 form.si_form button{
     text-align: center;
 }
-p.si_button button {
-    margin-right: 0;
-
+h3 {
+    text-align: center;
+}
+p.search_button{
+    float: right;
 }
 /* search.php　ここまで */
-
-
 
 /* list.php　ここから */
 #list {
@@ -109,7 +125,13 @@ p.si_button button {
     margin-left: auto;
     margin-right: auto;
 }
-/* list.php　ここから */
+hr{
+    width: 960px;
+}
+p.list_home{
+    float: right;
+}
+/* list.php　ここまで */
 
 /* detail.php　ここから */
 #detail {
@@ -117,7 +139,30 @@ p.si_button button {
     margin-left: auto;
     margin-right: auto;
 }
-/* detail.php　ここから */
+p.writer{
+    text-align: center;
+}
+form.det p.detail_button{
+    text-align: center;
+}
+form p.detail_button button{
+    font-size: 16px;
+    background-color: #f8f5e3;
+    padding: 9px 15px;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 0 auto;
+    transition: .3s;
+}
+form p.detail_button button:hover{
+    transform: scale(1.1);
+    background-color: #cae853;
+}
+div.det{
+    float: right;
+}
+
+/* detail.php　ここまで */
 
 /* delete.php　ここから */
 #delete {
@@ -125,8 +170,11 @@ p.si_button button {
     margin-left: auto;
     margin-right: auto;
 }
-p.detail_button{
+#delete h2{
     text-align: center;
+}
+p.delete{
+    float: right;
 }
 /* delete.php　ここまで */
 
@@ -135,5 +183,46 @@ p.detail_button{
     width: 960px;
     margin-right: auto;
     margin-left: auto;
+}
+#contents button{
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    background: #fff;
+    padding: 18px 30px;
+    border: 3px solid #333;
+    box-shadow: 0 5px 0 #333;
+    border-radius: 6px;
+    display: inline-block;
+    transition: .3s;
+}
+#contents button:hover{
+    background-color: #cae853;
+    transform: translateY(5px);
+    box-shadow: 0 0 0 #333;
+}
+div.content{
+    display: flex;
+    justify-content: center;
+}
+div.colim div.row{
+    margin: 10px;
+}
+div.coulm{
+    margin-right: 90px;
+}
+input[type="button"] {
+    background-color: #D3DEF1;
+    float: right;
+    margin-right: 0;
+    width: 8em;
+    padding: 0.6em;
+    border-radius: 8px;
+    transition: .8s;
+    position: relative;
+    top: 65px;
+}
+input[type="button"]:hover{
+    background-color: #F2D5E0;
 }
 /* countents.php　ここまで */

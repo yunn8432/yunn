@@ -3,7 +3,7 @@
 <h1>検索結果</h1>
 <hr>
 <?php
-    $pdo=new PDO('mysql:host=localhost;dbname=book;charset=utf8','book','password');
+    $pdo=new PDO('mysql:host=localhost;dbname=xslive230801_chidori;charset=utf8','xslive230801_chi','livebusiness');
     
     if(isset($_GET['search']) && $_GET['search'] !== ''){
         // mb_convert_kanaで検索キーワードをカタカナに変換
@@ -14,13 +14,14 @@
         $sql->execute([$search,$search,$search,$search]);
 
         foreach($sql as $row){ ?>
-            <h2><a href="detail.php?title=<?=$row['title']?>"><?= $row['tilte'] ?></a></h2>
-            <p><?= $row['writer'] ?></p>
+            <h2><a href="detail.php?title=<?=$row['title']?>"><?= $row['title'] ?></a></h2>
+            <p>著者：<?= $row['writer'] ?></p>
+            <p class="search_button"><button onclick="location.href='search-input.php'">検索に戻る</button></p>
 <?php } }
 
     if(empty($_GET['search'])){ ?>
         <h3>タイトルを入力してください。</h3>
-        <p><button onclick="location.href='search-input.php'">検索に戻る</button></p>
+        <p class="search_button"><button onclick="location.href='search-input.php'">検索に戻る</button></p>
 <?php } ?>
 </body>
 <?php  require 'footer.php'; ?>
