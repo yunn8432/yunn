@@ -1,0 +1,82 @@
+body{
+    background-color: #fdeeef;
+}
+button{
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #FFBCD9;
+}
+#menu{
+    width: 960px;
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+form.form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        border: 1px solid #000;
+        border-width: medium;
+        margin: 0 auto;
+        padding: 35px 115px;
+        border-radius: 10px;
+        background-color: #fffff0;
+        position: relative;
+        top: 35px;
+}
+#login{
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+p.log, p.log_button{
+    text-align: center;
+}
+
+p.new{
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+body#list{
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+table{
+    width: 100%;
+}
+tr td{
+    text-align: center;
+}
+#favorite{
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+p.favorite{
+    text-align: center;
+}
+#delete{
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+p.delete{
+    text-align: center;
+}
+#logout{
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+p.logout{
+    text-align: center;
+}
