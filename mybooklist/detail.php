@@ -6,7 +6,7 @@
         $title = $_GET['title'];
     }
     
-    $pdo=new PDO('mysql:host=localhost;dbname=xslive230801_chidori;charset=utf8','xslive230801_chi','livebusiness');
+    $pdo=new PDO('mysql:host=localhost;dbname=book;charset=utf8','book','password');
     $query='SELECT*FROM list JOIN kana ON list.list_id=kana.kana_id WHERE title=?';
 
     $sql=$pdo->prepare($query);

@@ -6,7 +6,7 @@
 <?php
     $pdo=new PDO('mysql:host=localhost;dbname=xslive230801_chidori;charset=utf8','xslive230801_chi','livebusiness');
     foreach($pdo->query('SELECT*FROM list') as $row) {
-        echo '<h2><a href="detail.php?title='.$row['title'].'">'.$row['title'].'</a></h2>';
+        echo '<h2><a href="detail.php?title='.$row['title'].'" class="hover-animation">'.$row['title'].'</a></h2>';
         echo '<p>著者：'.$row['writer'].'</p>';
     }
 ?>

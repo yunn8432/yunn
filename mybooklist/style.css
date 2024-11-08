@@ -3,7 +3,7 @@
 body {
     background-color: #f8f5e3;
 }
-p button{
+/* p button{
     background-color: #D3DEF1;
     width: 8em;
     padding: 0.6em;
@@ -14,6 +14,187 @@ p button{
 }
 p button:hover{
     background-color: #F2D5E0;
+} */
+
+/* google fonts */
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  font-size: 5vw;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text.is-active {
+  --x: 0;
+}
+
+.char {
+    overflow: hidden;
+}
+
+.char-text {
+  display: inline-block;
+  transform: translateX(var(--x, -101%));
+  /* 要素の２つの状態間の変化を定義するためのもの */
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition-delay: calc(0.05s * var(--char-index));
+}
+
+/* 初期CSS */
+.container {
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visuallyHidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  /* 画像などの要素について、切り抜き領域を指定するプロパティ */
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+:root {
+  --text-color: #968b79;
+  --shadow-color: hsla(210, 40%, 52%, .4);
+  /* hsla()関数は、HSLカラー•モデルの色相、彩度、輝度の成分と透明度を表すアルファ値で色を指定するための関数 */
+  --btn-color: #bdbace;
+  --bg-btn-color: #09080a;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* allの意 */
+
+html, body.register {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+}
+
+p.reg_5_button button {
+  position:relative;
+  padding: 10px 20px;  
+  border: none;
+  background: none;
+  cursor: pointer;
+  /* マウスポインタが要素の上にいる時に表示されるマウスカーソルを設定する */
+  
+  font-family: "Source Code Pro";
+  font-weight: 700;
+  text-transform: uppercase;
+  /* 全ての文字を大文字に変換する */
+  font-size: 25px;  
+  color: var(--text-color);
+  
+  background-color: var(--btn-color);
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  border-radius: 4px; 
+  z-index: 0;  
+  overflow: hidden;   
+
+  text-align: center;
+  border-radius: 5px;
+}
+
+p.reg_5_button button:focus {
+  outline-color: transparent;
+  box-shadow: var(--btn-color) 2px 2px 22px;
+}
+
+.right::after, p.reg_5_button button::after {
+  content: var(--content);
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 40px 40px;
+  pointer-events:none;
+}
+
+p.reg_5_button button::after{
+  font-weight: 200;
+  top: -30px;
+  left: -20px;
+} 
+
+.right, .left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.right {
+  left: 66%;
+}
+.left {
+  right: 66%;
+}
+.right::after {
+  top: -30px;
+  left: calc(-66% - 20px);
+  background-color: var(--bg-btn-color);
+  color:transparent;
+  transition: transform .4s ease-out;
+  /* ease 動きの加減速 */
+  /* ease-out 徐々に減速する。変化の余韻が残りやすい印象 */
+  /* URL https://ics.media/entry/18730/ */
+  transform: translate(0, -90%) rotate(0deg)
+}
+
+p.reg_5_button button:hover .right::after {
+  transform: translate(0, -47%) rotate(0deg)
+  /* 与えられた要素を回転、拡大縮小、傾斜、移動することができる */
+}
+
+p.reg_5_button button .right:hover::after {
+  transform: translate(0, -50%) rotate(-7deg)
+}
+
+p.reg_5_button button .left:hover ~ .right::after {
+  transform: translate(0, -50%) rotate(7deg)
+}
+
+/* bubbles */
+p.reg_5_button button::before {
+  content: '';
+  pointer-events: none;
+  opacity: .6;
+  background:
+    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+    /* backgroundプロパティなどの背景関連プロパティの値に指定して、円形のグラデーションを表す。 */
+
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+  from {
+    transform: translate();
+  }
+  to {
+    transform: translate(0, -66.666%);
+  }
 }
 /* menu.php ここから*/
 nav button{
@@ -49,8 +230,8 @@ form.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 300px;
+    /* align-items: center; */
+    /* width: 300px; */
     border: 1px solid #000;
     border-width: medium;
     margin: 0 auto;
@@ -60,9 +241,9 @@ form.form {
     position: relative;
     top: 35px;
 }
-p.reg_5_button button{
+/* p.reg_5_button button{
     width: 5em;
-    padding: 0.5em;
+    padding: 1em;
     border-radius: 6px;
     background-color: #f8f5e3;
     text-align: center;
@@ -71,6 +252,11 @@ p.reg_5_button button{
 }
 p.reg_5_button button:hover {
     background-color: #cae853;
+} */
+p.reg_6_home{
+    text-align: center;
+    position: relative;
+    top: 15px;
 }
 p.reg_6_home{
     text-align: center;
@@ -78,17 +264,22 @@ p.reg_6_home{
     top: 15px;
 }
 input[required], textarea[required] {
-    background-color: #f0908d;
+    background-color: #d3d3d3;
+    padding: 10px;
+    border-radius: 8px;
 }
 input[required] {
-    width: 250px;
+    width: 350px;
+    border: none;
+    /* デフォで付いているborderを削除してくれる */
 }
 textarea {
     width: 350px;
     height: 150px;
-    border-width: medium;
+    border: none;
+    /* border-width: medium;
     border-color: #000;
-    border-radius: 6px;
+    border-radius: 6px; */
 }    
 /* register-input.php　ここまで */
 
@@ -226,3 +417,14 @@ input[type="button"]:hover{
     background-color: #F2D5E0;
 }
 /* countents.php　ここまで */
+
+
+.hover-animation {
+    display: block;
+    transition: all .5s ease;
+    /* スピード調整 */
+}
+.hover-animation:hover {
+
+    transform: translateY(-10px);
+}

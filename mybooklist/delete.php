@@ -4,7 +4,7 @@
 
 
 if(isset($_GET['title'])):
-    $pdo=new PDO('mysql:host=localhost;dbname=xslive230801_chidori;charset=utf8','xslive230801_chi','livebusiness');
+    $pdo=new PDO('mysql:host=localhost;dbname=book;charset=utf8','book','password');
     $pdo->beginTransaction();
 
     try{
